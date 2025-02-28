@@ -5,9 +5,17 @@ require('dotenv').config();
 const app = express();
 const cors = require('cors');
 
+// Import Routes
+
+
+
 // Middleware
 app.use(express.json());
 app.use(cors());
+
+// db coonection
+
+
 
 // Connect to DB
 mongoose
