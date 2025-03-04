@@ -14,7 +14,7 @@ console.log('Routes directory contents:', fs.readdirSync(path.join(__dirname, 'r
 
 // Import Routes
 const studentRoutes = require('./routes/studentRoutes');
-const teacherRoutes = require('./routes/teacherRoutes') ;
+const teacherRoutes = require('./routes/teacherRoutes');
 
 // Middleware
 app.use(express.json());
@@ -22,10 +22,7 @@ app.use(cors());
 
 // Connect to DB
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => {
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
