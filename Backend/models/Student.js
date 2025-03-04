@@ -30,7 +30,8 @@ const studentSchema = new mongoose.Schema({
 },
 
   subjects: { 
-    type: Map, of: Number 
+    type: Map,
+    of: Number 
 },
 
   profilePicture: {

@@ -3,6 +3,7 @@ const Student = require('../models/Student');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 // Helper function to send email
 const sendEmail = async (email, subject, text) => {
