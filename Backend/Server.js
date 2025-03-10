@@ -5,13 +5,6 @@ require('dotenv').config();
 const app = express();
 const cors = require('cors');
 
-// Log the current directory and the contents of the routes directory
-const fs = require('fs');
-const path = require('path');
-
-console.log('Current directory:', __dirname);
-console.log('Routes directory contents:', fs.readdirSync(path.join(__dirname, 'routes')));
-
 // Import Routes
 const studentRoutes = require('./routes/studentRoutes');
 const teacherRoutes = require('./routes/teacherRoutes');
